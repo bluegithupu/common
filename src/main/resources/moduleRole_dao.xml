@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dal>
+	<route>
+		<object name="com.ptteng.academy.tfboys.model.ModuleRole"
+			listenerClass="" strategyProperty="">
+			
+			
+			
+					<list name="getModuleRoleIdsByRoleIDAndModuleID"
+				sqlitem="select id from module_role where role_id=? and module_id=?"
+				keyProperty="roleID,moduleID" valueProperty="id" keyColumn="role_id,module_id" />
+						
+			
+						
+			
+					<list name="getModuleRoleIdsAll" sqlitem="select id from module_role where 1 = 1 order by create_at desc"
+				keyProperty="version" valueProperty="id" keyColumn="version" />
+			
+			<dbStrategy name="mutiDS"
+                clasz="com.gemantic.dal.route.strategy.DefaultStrategy">  <pattern value="[0-9]$" group="academy_tfboys" />
+            </dbStrategy>
+			
+		</object>
+	</route>
+</dal>

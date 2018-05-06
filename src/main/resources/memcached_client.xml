@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+	<cache>
+		<datasource
+			name="default"
+			timeout="300"
+			port="11211"
+			server="cache.academy.tfboys"
+			maxActive="18" 
+			maxIdle="18" 
+			maxWait="-1" 
+		/>
+	</cache>
+	<regions>
+		
+						<region name="com.ptteng.academy.tfboys.model.User" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+						<region name="com.ptteng.academy.tfboys.model.Article" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+						<region name="com.ptteng.academy.tfboys.model.Video" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+						<region name="com.ptteng.academy.tfboys.model.Teacher" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+						<region name="com.ptteng.academy.tfboys.model.UserSign" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+						<region name="com.ptteng.academy.tfboys.model.UserArticle" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+						<region name="com.ptteng.academy.tfboys.model.UserVideo" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+						<region name="com.ptteng.academy.tfboys.model.TemporaryData" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+						<region name="com.ptteng.academy.tfboys.model.Module" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+						<region name="com.ptteng.academy.tfboys.model.Role" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+						<region name="com.ptteng.academy.tfboys.model.ModuleRole" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+						<region name="com.ptteng.academy.tfboys.model.Admin" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+										
+				                    
+                                        
+			<region name="getUserIdByOpenID" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+                            
+                                    
+                                        
+			<region name="getUserIdByEmail" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+                            
+                                    
+                                        
+			<region name="getUserIdByPhone" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+                            
+                		
+		
+							
+						
+		
+							
+						
+		
+							
+				                    
+                                        
+			<region name="getTeacherNickNameById" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+                            
+                		
+		
+							
+				                    
+                                        
+			<region name="getUserSignIdByUserID" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+                            
+                		
+		
+							
+				                    
+                                        
+			<region name="getUserArticleIdByArticleIDAndUserID" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+                            
+                                    
+                                        
+			<region name="getUserArticleIdsByCollectionStatusAndUserID" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+                            
+                                    
+                                        
+			<region name="getUserArticleIdsByLikedStatusAndUserID" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+                            
+                		
+		
+							
+				                    
+                                        
+			<region name="getUserVideoIdByVideoIDAndUserID" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+                            
+                                    
+                                        
+			<region name="getUserVideoIdsByLikedStatusAndUserID" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+                            
+                                    
+                                        
+			<region name="getUserVideoIdsByCollectionStatusAndUserID" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+                            
+                		
+		
+							
+				                    
+                                        
+			<region name="getTemporaryDataIdByOpenID" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+                            
+                		
+		
+							
+				                    
+                                        
+			<region name="getModuleNameById" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+                            
+                		
+		
+							
+				                    
+                                        
+			<region name="getRoleRoleNameById" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+                            
+                		
+		
+							
+				                    
+                                        
+			<region name="getModuleRoleIdsByRoleIDAndModuleID" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+                            
+                		
+		
+							
+				                    
+                                        
+			<region name="getAdminSaltById" listenerClass="com.gemantic.dal.cache.listener.DefaultListenerImpl" strategyClass="com.gemantic.memcached.route.strategy.DefaultStrategy">
+			<keyPattern value="[0-9]$" datasource ="default"/>
+		</region>
+		
+                            
+                		
+		
+					
+			
+			
+			
+		
+		
+	
+
+
+	</regions>
+</root>
+

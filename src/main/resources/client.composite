@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite xmlns="http://www.osoa.org/xmlns/sca/1.0" xmlns:tuscany="http://tuscany.apache.org/xmlns/sca/1.0" xmlns:scallop="http://scallop/xmlns/sca/1.0"
+           targetNamespace="http://sns.sohu.com/home/composite" xmlns:sample="http://sns.sohu.com/home/composite" name="HomeComposite">
+	
+
+
+
+
+    	
+	
+	 <!-- AcademyTfboysComponent -->
+	 
+	     <component name = "UserServiceComponent">
+    	<implementation.java class = "com.ptteng.sca.academy.tfboys.client.UserSCAClient"/>
+    	   
+    	<reference name = "userService">
+    		<scallop:binding.rmi registryName = "user-academy-tfboys-service-rmi" serviceName="UserRMIService"/>
+    	</reference>
+    </component >
+        <component name = "ArticleServiceComponent">
+    	<implementation.java class = "com.ptteng.sca.academy.tfboys.client.ArticleSCAClient"/>
+    	   
+    	<reference name = "articleService">
+    		<scallop:binding.rmi registryName = "article-academy-tfboys-service-rmi" serviceName="ArticleRMIService"/>
+    	</reference>
+    </component >
+        <component name = "VideoServiceComponent">
+    	<implementation.java class = "com.ptteng.sca.academy.tfboys.client.VideoSCAClient"/>
+    	   
+    	<reference name = "videoService">
+    		<scallop:binding.rmi registryName = "video-academy-tfboys-service-rmi" serviceName="VideoRMIService"/>
+    	</reference>
+    </component >
+        <component name = "TeacherServiceComponent">
+    	<implementation.java class = "com.ptteng.sca.academy.tfboys.client.TeacherSCAClient"/>
+    	   
+    	<reference name = "teacherService">
+    		<scallop:binding.rmi registryName = "teacher-academy-tfboys-service-rmi" serviceName="TeacherRMIService"/>
+    	</reference>
+    </component >
+        <component name = "UserSignServiceComponent">
+    	<implementation.java class = "com.ptteng.sca.academy.tfboys.client.UserSignSCAClient"/>
+    	   
+    	<reference name = "userSignService">
+    		<scallop:binding.rmi registryName = "userSign-academy-tfboys-service-rmi" serviceName="UserSignRMIService"/>
+    	</reference>
+    </component >
+        <component name = "UserArticleServiceComponent">
+    	<implementation.java class = "com.ptteng.sca.academy.tfboys.client.UserArticleSCAClient"/>
+    	   
+    	<reference name = "userArticleService">
+    		<scallop:binding.rmi registryName = "userArticle-academy-tfboys-service-rmi" serviceName="UserArticleRMIService"/>
+    	</reference>
+    </component >
+        <component name = "UserVideoServiceComponent">
+    	<implementation.java class = "com.ptteng.sca.academy.tfboys.client.UserVideoSCAClient"/>
+    	   
+    	<reference name = "userVideoService">
+    		<scallop:binding.rmi registryName = "userVideo-academy-tfboys-service-rmi" serviceName="UserVideoRMIService"/>
+    	</reference>
+    </component >
+        <component name = "TemporaryDataServiceComponent">
+    	<implementation.java class = "com.ptteng.sca.academy.tfboys.client.TemporaryDataSCAClient"/>
+    	   
+    	<reference name = "temporaryDataService">
+    		<scallop:binding.rmi registryName = "temporaryData-academy-tfboys-service-rmi" serviceName="TemporaryDataRMIService"/>
+    	</reference>
+    </component >
+        <component name = "ModuleServiceComponent">
+    	<implementation.java class = "com.ptteng.sca.academy.tfboys.client.ModuleSCAClient"/>
+    	   
+    	<reference name = "moduleService">
+    		<scallop:binding.rmi registryName = "module-academy-tfboys-service-rmi" serviceName="ModuleRMIService"/>
+    	</reference>
+    </component >
+        <component name = "RoleServiceComponent">
+    	<implementation.java class = "com.ptteng.sca.academy.tfboys.client.RoleSCAClient"/>
+    	   
+    	<reference name = "roleService">
+    		<scallop:binding.rmi registryName = "role-academy-tfboys-service-rmi" serviceName="RoleRMIService"/>
+    	</reference>
+    </component >
+        <component name = "ModuleRoleServiceComponent">
+    	<implementation.java class = "com.ptteng.sca.academy.tfboys.client.ModuleRoleSCAClient"/>
+    	   
+    	<reference name = "moduleRoleService">
+    		<scallop:binding.rmi registryName = "moduleRole-academy-tfboys-service-rmi" serviceName="ModuleRoleRMIService"/>
+    	</reference>
+    </component >
+        <component name = "AdminServiceComponent">
+    	<implementation.java class = "com.ptteng.sca.academy.tfboys.client.AdminSCAClient"/>
+    	   
+    	<reference name = "adminService">
+    		<scallop:binding.rmi registryName = "admin-academy-tfboys-service-rmi" serviceName="AdminRMIService"/>
+    	</reference>
+    </component >
+    	
+	
+</composite>
+

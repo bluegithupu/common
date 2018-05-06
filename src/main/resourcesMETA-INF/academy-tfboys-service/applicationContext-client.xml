@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:sca="http://www.springframework.org/schema/sca"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+            http://www.springframework.org/schema/sca http://www.springframework.org/schema/sca/spring-sca.xsd">
+	
+	<context:annotation-config />
+    <context:component-scan base-package="com.gemantic"/>  
+	
+	
+	<bean id="scaClient"
+		class="com.gemantic.common.sca.service.SCAClientBean">
+		<property name="resource" value="client.composite" />
+	</bean>
+	
+	
+	<!-- ============================================================ -->
+	<!-- ==                    AcademyTfboysComponent                       == -->
+	<!-- ============================================================ -->
+	
+	 
+	
+	
+	<!-- UserService  -->
+
+	
+	<bean id="userService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="UserServiceComponent" />
+		<property name="className"
+			value="com.ptteng.academy.tfboys.service.UserService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- ArticleService  -->
+
+	
+	<bean id="articleService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="ArticleServiceComponent" />
+		<property name="className"
+			value="com.ptteng.academy.tfboys.service.ArticleService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- VideoService  -->
+
+	
+	<bean id="videoService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="VideoServiceComponent" />
+		<property name="className"
+			value="com.ptteng.academy.tfboys.service.VideoService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- TeacherService  -->
+
+	
+	<bean id="teacherService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="TeacherServiceComponent" />
+		<property name="className"
+			value="com.ptteng.academy.tfboys.service.TeacherService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- UserSignService  -->
+
+	
+	<bean id="userSignService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="UserSignServiceComponent" />
+		<property name="className"
+			value="com.ptteng.academy.tfboys.service.UserSignService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- UserArticleService  -->
+
+	
+	<bean id="userArticleService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="UserArticleServiceComponent" />
+		<property name="className"
+			value="com.ptteng.academy.tfboys.service.UserArticleService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- UserVideoService  -->
+
+	
+	<bean id="userVideoService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="UserVideoServiceComponent" />
+		<property name="className"
+			value="com.ptteng.academy.tfboys.service.UserVideoService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- TemporaryDataService  -->
+
+	
+	<bean id="temporaryDataService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="TemporaryDataServiceComponent" />
+		<property name="className"
+			value="com.ptteng.academy.tfboys.service.TemporaryDataService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- ModuleService  -->
+
+	
+	<bean id="moduleService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="ModuleServiceComponent" />
+		<property name="className"
+			value="com.ptteng.academy.tfboys.service.ModuleService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- RoleService  -->
+
+	
+	<bean id="roleService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="RoleServiceComponent" />
+		<property name="className"
+			value="com.ptteng.academy.tfboys.service.RoleService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- ModuleRoleService  -->
+
+	
+	<bean id="moduleRoleService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="ModuleRoleServiceComponent" />
+		<property name="className"
+			value="com.ptteng.academy.tfboys.service.ModuleRoleService" />
+	</bean>
+
+	
+	
+	
+	
+	<!-- AdminService  -->
+
+	
+	<bean id="adminService"
+		class="com.gemantic.common.sca.service.SCAClientServiceFactory">
+		<property name="client" ref="scaClient" />
+		<property name="component" value="AdminServiceComponent" />
+		<property name="className"
+			value="com.ptteng.academy.tfboys.service.AdminService" />
+	</bean>
+
+	
+		
+	
+	
+	
+	<!-- performance -->
+	
+	 <aop:aspectj-autoproxy />
+        <bean id="aroundLoggingTime" class="com.gemantic.common.stat.aop.time.AroundTimeConsume"/>
+        <aop:config>
+            <aop:aspect ref="aroundLoggingTime">
+                <aop:pointcut id="publicServiceMethod" expression="execution(* com.gemantic..service.*.*(..)) &amp;&amp; (!execution(* com.gemantic.common.sca.service.*.*(..)))" />
+                <aop:around method="around" pointcut-ref="publicServiceMethod"/>
+            </aop:aspect>
+        </aop:config>
+</beans>
+

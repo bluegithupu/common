@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dal>
+	<route>
+		<object name="com.ptteng.academy.tfboys.model.UserArticle"
+			listenerClass="" strategyProperty="">
+			
+			
+			
+					<list name="getUserArticleIdsByCollectionStatusAndUserID"
+				sqlitem="select id from user_article where collection_status = ? and user_id = ?"
+				keyProperty="collectionStatus,userID" valueProperty="id" keyColumn="collection_status,user_id" />
+					<list name="getUserArticleIdsByLikedStatusAndUserID"
+				sqlitem="select id from user_article where liked_status = ? and user_id = ?"
+				keyProperty="likedStatus,userID" valueProperty="id" keyColumn="liked_status,user_id" />
+						
+			
+					<map name="getUserArticleIdByArticleIDAndUserID"
+				sqlitem="select id from user_article where article_id = ? and user_id = ?"
+				keyProperty="articleID,userID" valueProperty="id" keyColumn="article_id,user_id" />
+						
+			
+					<list name="getUserArticleIdsAll" sqlitem="select id from user_article where 1 = 1 order by create_at desc"
+				keyProperty="version" valueProperty="id" keyColumn="version" />
+			
+			<dbStrategy name="mutiDS"
+                clasz="com.gemantic.dal.route.strategy.DefaultStrategy">  <pattern value="[0-9]$" group="academy_tfboys" />
+            </dbStrategy>
+			
+		</object>
+	</route>
+</dal>

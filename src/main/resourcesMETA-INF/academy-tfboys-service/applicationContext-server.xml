@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:sca="http://www.springframework.org/schema/sca"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+            http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+            http://www.springframework.org/schema/sca http://www.springframework.org/schema/sca/spring-sca.xsd">
+
+	<context:component-scan base-package="com.ptteng.academy.tfboys" />
+
+	
+		<sca:service name="userService"
+		type="com.ptteng.academy.tfboys.service.UserService" target="userService" />
+		
+	
+		<sca:service name="articleService"
+		type="com.ptteng.academy.tfboys.service.ArticleService" target="articleService" />
+		
+	
+		<sca:service name="videoService"
+		type="com.ptteng.academy.tfboys.service.VideoService" target="videoService" />
+		
+	
+		<sca:service name="teacherService"
+		type="com.ptteng.academy.tfboys.service.TeacherService" target="teacherService" />
+		
+	
+		<sca:service name="userSignService"
+		type="com.ptteng.academy.tfboys.service.UserSignService" target="userSignService" />
+		
+	
+		<sca:service name="userArticleService"
+		type="com.ptteng.academy.tfboys.service.UserArticleService" target="userArticleService" />
+		
+	
+		<sca:service name="userVideoService"
+		type="com.ptteng.academy.tfboys.service.UserVideoService" target="userVideoService" />
+		
+	
+		<sca:service name="temporaryDataService"
+		type="com.ptteng.academy.tfboys.service.TemporaryDataService" target="temporaryDataService" />
+		
+	
+		<sca:service name="moduleService"
+		type="com.ptteng.academy.tfboys.service.ModuleService" target="moduleService" />
+		
+	
+		<sca:service name="roleService"
+		type="com.ptteng.academy.tfboys.service.RoleService" target="roleService" />
+		
+	
+		<sca:service name="moduleRoleService"
+		type="com.ptteng.academy.tfboys.service.ModuleRoleService" target="moduleRoleService" />
+		
+	
+		<sca:service name="adminService"
+		type="com.ptteng.academy.tfboys.service.AdminService" target="adminService" />
+		
+	
+		
+	
+	 
+	
+	
+
+
+	
+
+
+
+	
+		
+	<bean id="userService"
+		class="com.ptteng.academy.tfboys.service.impl.UserServiceImpl" parent="baseDaoService">
+
+	</bean>
+		
+	<bean id="articleService"
+		class="com.ptteng.academy.tfboys.service.impl.ArticleServiceImpl" parent="baseDaoService">
+
+	</bean>
+		
+	<bean id="videoService"
+		class="com.ptteng.academy.tfboys.service.impl.VideoServiceImpl" parent="baseDaoService">
+
+	</bean>
+		
+	<bean id="teacherService"
+		class="com.ptteng.academy.tfboys.service.impl.TeacherServiceImpl" parent="baseDaoService">
+
+	</bean>
+		
+	<bean id="userSignService"
+		class="com.ptteng.academy.tfboys.service.impl.UserSignServiceImpl" parent="baseDaoService">
+
+	</bean>
+		
+	<bean id="userArticleService"
+		class="com.ptteng.academy.tfboys.service.impl.UserArticleServiceImpl" parent="baseDaoService">
+
+	</bean>
+		
+	<bean id="userVideoService"
+		class="com.ptteng.academy.tfboys.service.impl.UserVideoServiceImpl" parent="baseDaoService">
+
+	</bean>
+		
+	<bean id="temporaryDataService"
+		class="com.ptteng.academy.tfboys.service.impl.TemporaryDataServiceImpl" parent="baseDaoService">
+
+	</bean>
+		
+	<bean id="moduleService"
+		class="com.ptteng.academy.tfboys.service.impl.ModuleServiceImpl" parent="baseDaoService">
+
+	</bean>
+		
+	<bean id="roleService"
+		class="com.ptteng.academy.tfboys.service.impl.RoleServiceImpl" parent="baseDaoService">
+
+	</bean>
+		
+	<bean id="moduleRoleService"
+		class="com.ptteng.academy.tfboys.service.impl.ModuleRoleServiceImpl" parent="baseDaoService">
+
+	</bean>
+		
+	<bean id="adminService"
+		class="com.ptteng.academy.tfboys.service.impl.AdminServiceImpl" parent="baseDaoService">
+
+	</bean>
+		
+
+<bean id="dao" class="com.gemantic.dal.dao.impl.CompositeDaoImpl" />
+
+	<bean id="baseDaoService"
+		class="com.ptteng.common.dao.BaseDaoServiceImpl">
+		<property name="dao" ref="dao" />
+	</bean>
+
+
+
+
+
+
+	<!-- performance -->
+	<aop:aspectj-autoproxy />
+	<bean id="aroundLoggingTime" class="com.gemantic.common.stat.aop.time.AroundTimeConsume" />
+	<aop:config>
+		<aop:aspect ref="aroundLoggingTime">
+			<aop:pointcut id="publicServiceMethod"
+				expression="execution(* com.gemantic..service.*.*(..)) " />
+			<aop:around method="around" pointcut-ref="publicServiceMethod" />
+		</aop:aspect>
+	</aop:config>
+
+</beans>
+

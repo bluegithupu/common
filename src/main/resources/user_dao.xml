@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dal>
+	<route>
+		<object name="com.ptteng.academy.tfboys.model.User"
+			listenerClass="" strategyProperty="">
+			
+			
+			
+						
+			
+					<map name="getUserIdByOpenID"
+				sqlitem="select id from user where open_id = ?"
+				keyProperty="openID" valueProperty="id" keyColumn="open_id" />
+					<map name="getUserIdByEmail"
+				sqlitem="select id from user where email = ?"
+				keyProperty="email" valueProperty="id" keyColumn="email" />
+					<map name="getUserIdByPhone"
+				sqlitem="select id from user where phone = ?"
+				keyProperty="phone" valueProperty="id" keyColumn="phone" />
+						
+			
+					<list name="getUserIdsAll" sqlitem="select id from user where 1 = 1 order by create_at desc"
+				keyProperty="version" valueProperty="id" keyColumn="version" />
+			
+			<dbStrategy name="mutiDS"
+                clasz="com.gemantic.dal.route.strategy.DefaultStrategy">  <pattern value="[0-9]$" group="academy_tfboys" />
+            </dbStrategy>
+			
+		</object>
+	</route>
+</dal>

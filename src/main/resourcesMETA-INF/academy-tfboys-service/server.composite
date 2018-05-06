@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite xmlns="http://www.osoa.org/xmlns/sca/1.0" xmlns:tuscany="http://tuscany.apache.org/xmlns/sca/1.0"
+    xmlns:scallop="http://scallop/xmlns/sca/1.0"
+    targetNamespace="http://AcademyTfboysComponent" xmlns:sample="http://AcademyTfboysComponent" name="AcademyTfboysComponent">
+
+
+  <component name="AcademyTfboysComponent">
+    <implementation.spring location="META-INF/academy-tfboys-service/applicationContext-server.xml" />
+  </component>
+  
+	  <service name="userService" promote="AcademyTfboysComponent/userService">
+    <interface.java interface="com.ptteng.academy.tfboys.service.UserService"/> 
+    <scallop:binding.rmi host="localhost" port="8888" serviceName="UserRMIService"/>     
+  </service>
+	  <service name="articleService" promote="AcademyTfboysComponent/articleService">
+    <interface.java interface="com.ptteng.academy.tfboys.service.ArticleService"/> 
+    <scallop:binding.rmi host="localhost" port="8888" serviceName="ArticleRMIService"/>     
+  </service>
+	  <service name="videoService" promote="AcademyTfboysComponent/videoService">
+    <interface.java interface="com.ptteng.academy.tfboys.service.VideoService"/> 
+    <scallop:binding.rmi host="localhost" port="8888" serviceName="VideoRMIService"/>     
+  </service>
+	  <service name="teacherService" promote="AcademyTfboysComponent/teacherService">
+    <interface.java interface="com.ptteng.academy.tfboys.service.TeacherService"/> 
+    <scallop:binding.rmi host="localhost" port="8888" serviceName="TeacherRMIService"/>     
+  </service>
+	  <service name="userSignService" promote="AcademyTfboysComponent/userSignService">
+    <interface.java interface="com.ptteng.academy.tfboys.service.UserSignService"/> 
+    <scallop:binding.rmi host="localhost" port="8888" serviceName="UserSignRMIService"/>     
+  </service>
+	  <service name="userArticleService" promote="AcademyTfboysComponent/userArticleService">
+    <interface.java interface="com.ptteng.academy.tfboys.service.UserArticleService"/> 
+    <scallop:binding.rmi host="localhost" port="8888" serviceName="UserArticleRMIService"/>     
+  </service>
+	  <service name="userVideoService" promote="AcademyTfboysComponent/userVideoService">
+    <interface.java interface="com.ptteng.academy.tfboys.service.UserVideoService"/> 
+    <scallop:binding.rmi host="localhost" port="8888" serviceName="UserVideoRMIService"/>     
+  </service>
+	  <service name="temporaryDataService" promote="AcademyTfboysComponent/temporaryDataService">
+    <interface.java interface="com.ptteng.academy.tfboys.service.TemporaryDataService"/> 
+    <scallop:binding.rmi host="localhost" port="8888" serviceName="TemporaryDataRMIService"/>     
+  </service>
+	  <service name="moduleService" promote="AcademyTfboysComponent/moduleService">
+    <interface.java interface="com.ptteng.academy.tfboys.service.ModuleService"/> 
+    <scallop:binding.rmi host="localhost" port="8888" serviceName="ModuleRMIService"/>     
+  </service>
+	  <service name="roleService" promote="AcademyTfboysComponent/roleService">
+    <interface.java interface="com.ptteng.academy.tfboys.service.RoleService"/> 
+    <scallop:binding.rmi host="localhost" port="8888" serviceName="RoleRMIService"/>     
+  </service>
+	  <service name="moduleRoleService" promote="AcademyTfboysComponent/moduleRoleService">
+    <interface.java interface="com.ptteng.academy.tfboys.service.ModuleRoleService"/> 
+    <scallop:binding.rmi host="localhost" port="8888" serviceName="ModuleRoleRMIService"/>     
+  </service>
+	  <service name="adminService" promote="AcademyTfboysComponent/adminService">
+    <interface.java interface="com.ptteng.academy.tfboys.service.AdminService"/> 
+    <scallop:binding.rmi host="localhost" port="8888" serviceName="AdminRMIService"/>     
+  </service>
+	
+	
+	 
+  
+	
+
+
+</composite>
+

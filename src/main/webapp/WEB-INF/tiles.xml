@@ -1,0 +1,63 @@
+
+		
+						<definition name="/academy-tfboys-service/user/view/*" extends="root">
+		    <put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />
+		      <put-attribute name="title" value="地址" type="string" />
+	        </definition>
+	
+						<definition name="/academy-tfboys-service/article/view/*" extends="root">
+		    <put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />
+		      <put-attribute name="title" value="地址" type="string" />
+	        </definition>
+	
+						<definition name="/academy-tfboys-service/video/view/*" extends="root">
+		    <put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />
+		      <put-attribute name="title" value="地址" type="string" />
+	        </definition>
+	
+						<definition name="/academy-tfboys-service/teacher/view/*" extends="root">
+		    <put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />
+		      <put-attribute name="title" value="地址" type="string" />
+	        </definition>
+	
+						<definition name="/academy-tfboys-service/userSign/view/*" extends="root">
+		    <put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />
+		      <put-attribute name="title" value="地址" type="string" />
+	        </definition>
+	
+						<definition name="/academy-tfboys-service/userArticle/view/*" extends="root">
+		    <put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />
+		      <put-attribute name="title" value="地址" type="string" />
+	        </definition>
+	
+						<definition name="/academy-tfboys-service/userVideo/view/*" extends="root">
+		    <put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />
+		      <put-attribute name="title" value="地址" type="string" />
+	        </definition>
+	
+						<definition name="/academy-tfboys-service/temporaryData/view/*" extends="root">
+		    <put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />
+		      <put-attribute name="title" value="地址" type="string" />
+	        </definition>
+	
+						<definition name="/academy-tfboys-service/module/view/*" extends="root">
+		    <put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />
+		      <put-attribute name="title" value="地址" type="string" />
+	        </definition>
+	
+						<definition name="/academy-tfboys-service/role/view/*" extends="root">
+		    <put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />
+		      <put-attribute name="title" value="地址" type="string" />
+	        </definition>
+	
+						<definition name="/academy-tfboys-service/moduleRole/view/*" extends="root">
+		    <put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />
+		      <put-attribute name="title" value="地址" type="string" />
+	        </definition>
+	
+						<definition name="/academy-tfboys-service/admin/view/*" extends="root">
+		    <put-attribute name="right" value="/WEB-INF/pages/{0}.jsp" />
+		      <put-attribute name="title" value="地址" type="string" />
+	        </definition>
+	
+					
